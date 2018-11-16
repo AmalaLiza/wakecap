@@ -4,7 +4,7 @@ import { connect } from 'react-redux';
 import styles from './App.css';
 import Sidebar from '../../components/Sidebar/Sidebar';
 import Content from '../Contents/Contents';
-import WorkerList from "../../components/WorkerList/WorkerList";
+import WorkerList from '../../components/WorkerList/WorkerList';
 
 class App extends Component {
   constructor(props, context) {
@@ -15,11 +15,11 @@ class App extends Component {
     return (
       <div className={styles.wrapper}>
 
-        <header className={classNames(styles.box, styles.header)}>Header</header>
+        <header className={classNames(styles.header)}>Header</header>
         <Sidebar />
         <WorkerList />
         <Content />
-        <footer className={classNames(styles.box, styles.footer)}>Footer</footer>
+        <footer className={classNames(styles.footer)}>Footer</footer>
       </div>
     );
   }
