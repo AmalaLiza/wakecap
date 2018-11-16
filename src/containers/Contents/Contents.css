@@ -11,6 +11,7 @@
     font-size: 12px;
     width: 100px;
     height: 100px;
+    margin-right: 25px;
 }
 
 .firstSection {
@@ -30,6 +31,16 @@
     display: flex;
 }
 
-.section_3{
+.section_3 {
     display: flex;
+}
+
+.plus {
+    width: 25px;
+    font-size: 12px;
+    font-weight: 900;
+    border-radius: 50%;
+    height: 25px;
+    color: white;
+    background-color: black;
 }
