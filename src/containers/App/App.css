@@ -26,14 +26,6 @@
     grid-template-areas: "header" "sidebar" "sidebar2" "content" "footer"
 }
 
-/*@media only screen and (min-width: 500px) {*/
-/*.wrapper {*/
-
-/*grid-template-columns: 20% auto;*/
-/*grid-template-areas: "header   header" "sidebar  content" "sidebar2 sidebar2" "footer   footer";*/
-/*}*/
-/*}*/
-
 @media screen and (max-width: 600px) {
     body {
         background-color: lightgreen;
@@ -54,7 +46,7 @@
     .wrapper {
         grid-gap: 20px;
         grid-template-columns: 200px 120px auto;
-        grid-template-areas: "header  header  header" "sidebar sidebar2 content " "footer  footer  footer";
+        grid-template-areas: "sidebar  header  header" "sidebar sidebar2 content " "footer  footer  footer";
     }
 }
 

@@ -2,6 +2,7 @@ import React, {Component} from 'react';
 import classNames from 'classnames';
 import {connect} from 'react-redux';
 import styles from './App.css';
+import Sidebar from "../../components/Sidebar/Sidebar";
 
 class App extends Component {
 
@@ -13,30 +14,8 @@ class App extends Component {
         return <div className={styles.wrapper}>
 
             <header className={classNames(styles.box, styles.header)}>Header</header>
-            <nav className={classNames(styles.box, styles.sidebar)}>
-                <li>
-                    Dashboard
-                </li>
-                <p>
-                    Workers
-                </p>
-                <li>
-                    Zones
-                </li>
-                <li>
-                    Assign Helmets
-                </li>
-                <p>
-                    Reports
-                </p>
-                <li>
-                    Manage Sites
-                </li>
-                <li>
-                    Settings
-                </li>
-
-            </nav>
+            <Sidebar>
+            </Sidebar>
             <div className={classNames(styles.box, styles.sidebar2)}>Sidebar 2</div>
             <div className={classNames(styles.box, styles.content)}>Content
                 <section>
