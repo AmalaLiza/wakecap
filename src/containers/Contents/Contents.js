@@ -70,9 +70,8 @@ class Contents extends Component {
               </span>
             </div>
           ))}
+            <button className={styles.plus}>+</button>
         </section>
-        <button>+</button>
-        <section />
       </div>
     );
   }
