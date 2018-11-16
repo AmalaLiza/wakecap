@@ -8,7 +8,9 @@
 .box {
     background-color: #444;
     color: #fff;
-    font-size: 150%;
+    font-size: 12px;
+    width: 100px;
+    height: 100px;
 }
 
 .firstSection {
@@ -25,5 +27,9 @@
 }
 
 .section_1 {
+    display: flex;
+}
+
+.section_3{
     display: flex;
 }

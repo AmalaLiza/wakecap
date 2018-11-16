@@ -25,13 +25,19 @@ class Contents extends Component {
       designation: 'Designation',
     };
     return (
-      <div className={classNames(styles.box, styles.content)}>
+      <div className={classNames(styles.content)}>
         <section className={styles.section_1}>
           <div className={styles.firstSection}>
             <Avatar avatar={user} />
             <div>
-              <span>Asset ID</span> : <span>3456ERTYU</span>
-              <span>Tag ID</span> : <span>345678</span>
+              <span>Asset ID</span>
+              {' '}
+:
+              <span>3456ERTYU</span>
+              <span>Tag ID</span>
+              {' '}
+:
+              <span>345678</span>
             </div>
           </div>
           <Avatar className={styles.supervisor} avatar={supervisor} />
@@ -48,21 +54,23 @@ class Contents extends Component {
                         Graph Here
           </div>
         </section>
-        {helmets.map(helmet => (
-          <div className={styles.box}>
-            <span>Icon</span>
-            <span>123456789</span>
-            <span>Icon</span>
-            <span>In-123</span>
-            <span>Icon</span>
-            {' '}
-            <span>
-              {helmet.days}
+        <section className={styles.section_3}>
+          {helmets.map(helmet => (
+            <div className={styles.box}>
+              <span>Icon</span>
+              <span>123456789</span>
+              <span>Icon</span>
+              <span>In-123</span>
+              <span>Icon</span>
               {' '}
-                            days ago
-            </span>
-          </div>
-        ))}
+              <span>
+                {helmet.days}
+                {' '}
+                          days ago
+              </span>
+            </div>
+          ))}
+        </section>
         <button>+</button>
         <section />
       </div>
