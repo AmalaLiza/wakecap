@@ -1,10 +1,10 @@
 import React, { Component } from 'react';
-import classNames from 'classnames';
 import { connect } from 'react-redux';
 import styles from './App.css';
 import Sidebar from '../../components/Sidebar/Sidebar';
 import Content from '../Contents/Contents';
 import WorkerList from '../../components/WorkerList/WorkerList';
+import Header from '../../components/Header/Header';
 
 class App extends Component {
   constructor(props, context) {
@@ -14,8 +14,7 @@ class App extends Component {
   render() {
     return (
       <div className={styles.wrapper}>
-
-        <header className={classNames(styles.header)}>Header</header>
+        <Header />
         <Sidebar />
         <WorkerList />
         <Content />

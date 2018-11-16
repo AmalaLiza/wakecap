@@ -8,9 +8,9 @@ import logo from '../../assets/logo.png';
 class Sidebar extends Component {
   render() {
     return (
-      <nav className={classNames(styles1.box, styles1.sidebar)}>
+      <nav className={classNames(styles1.sidebar)}>
         <div className={styles.imgWrapper}>
-          <img src={logo} width="150" height="75" />
+          <img src={logo} width="125" height="75" />
         </div>
         <div className={styles.sideBarItemContainer}>
           {sideBarItem.map(item => (
