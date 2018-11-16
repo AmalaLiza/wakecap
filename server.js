@@ -3,7 +3,7 @@ const webpack = require('webpack');
 const WebpackDevServer = require('webpack-dev-server');
 const getConfig = require('./webpack/webpack.dev.config.js');
 
-const PORT = 8000;
+const PORT = 8008;
 const config = getConfig();
 process.on('uncaughtException', function (err) {
     console.error(err.stack);

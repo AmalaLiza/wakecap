@@ -1,0 +1,22 @@
+.imgWrapper{
+    display: flex;
+    justify-content: center;
+}
+
+.sideBarItemContainer{
+    margin-top: 10px;
+}
+
+.sideBarItemWrapper {
+    width: 100%;
+    list-style-type: none;
+    font-size: 15px;
+    font-family: sans-serif;
+    height: 50px;
+}
+
+.sideBarItem {
+    text-align: left;
+    padding-left: 20px;
+    line-height: 50px;
+}
