@@ -19,7 +19,6 @@ class App extends Component {
         <Sidebar />
         <WorkerList />
         <Content />
-        <footer className={classNames(styles.footer)}>Footer</footer>
       </div>
     );
   }

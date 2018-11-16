@@ -1,5 +1,6 @@
 .sidebar {
     grid-area: sidebar;
+    background-color: #444444;
 }
 
 .sidebar2 {
@@ -18,7 +19,6 @@
     background-color: #fff;
     color: #444;
     display: grid;
-    grid-gap: 1em;
     grid-template-areas: "header" "sidebar" "sidebar2" "content" "footer"
 }
 
@@ -36,11 +36,11 @@
 
 @media only screen and (min-width: 600px) {
     body {
-        background-color: lightcoral;
+        height: 100vh;
+        margin: 0;
     }
 
     .wrapper {
-        grid-gap: 20px;
         grid-template-columns: 200px 340px auto;
         grid-template-areas: "sidebar  header  header" "sidebar sidebar2 content " "footer  footer  footer";
     }
@@ -54,6 +54,7 @@
 .sidebar2 {
     background-color: #ccc;
     color: #444;
+    height: 100vh;
 }
 
 .block {
