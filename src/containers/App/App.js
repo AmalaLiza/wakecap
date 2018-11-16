@@ -17,7 +17,6 @@ class App extends Component {
 
         <header className={classNames(styles.box, styles.header)}>Header</header>
         <Sidebar />
-        <div >Sidebar 2</div>
         <WorkerList />
         <Content />
         <footer className={classNames(styles.box, styles.footer)}>Footer</footer>

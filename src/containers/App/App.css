@@ -6,10 +6,6 @@
     grid-area: sidebar2;
 }
 
-.content {
-    grid-area: content;
-}
-
 .header {
     grid-area: header;
 }

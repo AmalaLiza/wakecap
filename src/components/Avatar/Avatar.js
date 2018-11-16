@@ -1,15 +1,16 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import classNames from 'classnames';
+import styles from './Avatar.css';
 
 class Avatar extends Component {
   render() {
     const { showIdNumber, avatar, className } = this.props;
     return (
       <div className={classNames('styles.className', className)}>
-        <img src="" />
-        <span>{avatar.name}</span>
-        <span>{avatar.designation}</span>
+        <img className={styles.image} src="" />
+        <div>{avatar.name}</div>
+        <div>{avatar.designation}</div>
         {!!showIdNumber && <span>{avatar.id}</span>}
       </div>
     );

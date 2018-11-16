@@ -1,11 +1,21 @@
 import React, { Component } from 'react';
 import classNames from 'classnames';
-import styles from '../App/App.css';
+import styles from './Contents.css';
 import Avatar from '../../components/Avatar/Avatar';
 
 class Contents extends Component {
   render() {
     let { user } = this.props;
+    const helmets = [
+      {
+        name: 'Current User',
+        days: 2,
+      },
+      {
+        name: 'Current User',
+        days: 3,
+      },
+    ];
     user = {
       name: 'Current User',
       designation: 'Designation',
@@ -16,18 +26,15 @@ class Contents extends Component {
     };
     return (
       <div className={classNames(styles.box, styles.content)}>
-          Content
-        <section>
-          <Avatar avatar={user} />
-          <div>
-            <span>Asset ID</span>
-:
-            <span>3456ERTYU</span>
-            <span>Tag ID</span>
-:
-            <span>345678</span>
+        <section className={styles.section_1}>
+          <div className={styles.firstSection}>
+            <Avatar avatar={user} />
+            <div>
+              <span>Asset ID</span> : <span>3456ERTYU</span>
+              <span>Tag ID</span> : <span>345678</span>
+            </div>
           </div>
-          <Avatar className="reverse" avatar={supervisor} />
+          <Avatar className={styles.supervisor} avatar={supervisor} />
         </section>
         <section>
           <div>
@@ -38,19 +45,25 @@ class Contents extends Component {
             <button>Full history</button>
           </div>
           <div>
-                Graph Here
-          </div>
-
-          <h2>Title</h2>
-          <p>Paragraph example.</p>
-          <p>Paragraph example.</p>
-          <p>Paragraph example.</p>
-
-          <div className="box">
-            <p>Paragraph example.</p>
-            <p>Paragraph example.</p>
+                        Graph Here
           </div>
         </section>
+        {helmets.map(helmet => (
+          <div className={styles.box}>
+            <span>Icon</span>
+            <span>123456789</span>
+            <span>Icon</span>
+            <span>In-123</span>
+            <span>Icon</span>
+            {' '}
+            <span>
+              {helmet.days}
+              {' '}
+                            days ago
+            </span>
+          </div>
+        ))}
+        <button>+</button>
         <section />
       </div>
     );

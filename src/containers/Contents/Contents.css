@@ -1,0 +1,29 @@
+.content {
+    grid-area: content;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+}
+
+.box {
+    background-color: #444;
+    color: #fff;
+    font-size: 150%;
+}
+
+.firstSection {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    flex-grow: 0;
+    flex-basis: 50%;
+}
+
+.supervisor {
+    display: flex;
+    justify-content: right;
+}
+
+.section_1 {
+    display: flex;
+}
