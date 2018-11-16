@@ -45,16 +45,9 @@
 
     .wrapper {
         grid-gap: 20px;
-        grid-template-columns: 200px 120px auto;
+        grid-template-columns: 200px 340px auto;
         grid-template-areas: "sidebar  header  header" "sidebar sidebar2 content " "footer  footer  footer";
     }
-}
-
-.box {
-    background-color: #444;
-    color: #fff;
-    padding: 10px;
-    font-size: 150%;
 }
 
 .header,

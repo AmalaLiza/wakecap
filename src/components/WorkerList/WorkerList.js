@@ -1,64 +1,17 @@
 import React, { Component } from 'react';
 import classNames from 'classnames';
 import Avatar from '../Avatar/Avatar';
-import styles from '../../containers/App/App.css';
+import mainStyle from '../../containers/App/App.css';
+import { workerList } from './WorkList.constants';
+import styles from './WorkerList.css';
 
 class WorkerList extends Component {
   render() {
-    const workerList = [
-      {
-        id: 122,
-        name: 'Amala',
-        designation: 'engineer',
-      },
-      {
-        id: 123,
-        name: 'Arjun das',
-        designation: 'engineer',
-      },
-      {
-        id: 124,
-        name: 'Arjun r',
-        designation: 'engineer',
-      },
-      {
-        id: 125,
-        name: 'Arjun',
-        designation: 'engineer',
-      },
-      {
-        id: 126,
-        name: 'Bhavya Jio',
-        designation: 'engineer',
-      },
-      {
-        id: 127,
-        name: 'Bhavya',
-        designation: 'engineer',
-      },
-      {
-        id: 128,
-        name: 'Ashith r',
-        designation: 'engineer',
-      },
-      {
-        id: 129,
-        name: 'Ashith rahul',
-        designation: 'engineer',
-      },
-      {
-        id: 120,
-        name: 'Arjun',
-        designation: 'engineer',
-      },
-      {
-        id: 121,
-        name: 'Asith',
-        designation: 'engineer',
-      }];
     return (
-      <div className={classNames(styles.box, styles.sidebar2)}>
-        <input type="search" />
+      <div className={classNames(mainStyle.box, mainStyle.sidebar2)}>
+        <div className={styles.searchWrapper}>
+          <input type="search" />
+        </div>
         {workerList.map(worker => (
           <Avatar
             avatar={worker}
