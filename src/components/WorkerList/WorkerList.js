@@ -10,7 +10,7 @@ class WorkerList extends Component {
     return (
       <div className={classNames(mainStyle.box, mainStyle.sidebar2)}>
         <div className={styles.searchWrapper}>
-          <input type="search" />
+          <input type="search" className={styles.input} />
         </div>
         {workerList.map(worker => (
           <Avatar
