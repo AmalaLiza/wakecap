@@ -29,48 +29,47 @@ class Contents extends Component {
         <section className={styles.section_1}>
           <div className={styles.firstSection}>
             <Avatar avatar={user} />
-            <div>
-              <span>Asset ID</span>
-              {' '}
-:
-              <span>3456ERTYU</span>
-              <span>Tag ID</span>
-              {' '}
-:
-              <span>345678</span>
+            <div className={styles.propertiesWrapper}>
+              <div>
+                <span className={styles.properties}>Asset ID: </span>
+                <span> 3456ERTYU</span>
+              </div>
+              <div>
+                <span>Tag ID: </span>
+                <span> 345678</span>
+              </div>
             </div>
           </div>
           <Avatar className={styles.supervisor} avatar={supervisor} />
         </section>
-        <section>
-          <div>
+        <section className={styles.section_2}>
+          <div className={styles.hours}>
             <span>Total hours worked</span>
-            <span>2345</span>
+            <span className={styles.bold}>{Number('2345').toLocaleString()}</span>
             <span>Last Active Zone</span>
-            <span>Zone 2</span>
-            <button>Full history</button>
+            <span className={styles.bold}>Zone 2</span>
+            <button className={styles.history}>Full history</button>
           </div>
-          <div>
-                        Graph Here
+          <div className={styles.graph}>
+              Graph Here
           </div>
         </section>
         <section className={styles.section_3}>
-          {helmets.map(helmet => (
-            <div className={styles.box}>
-              <span>Icon</span>
-              <span>123456789</span>
-              <span>Icon</span>
-              <span>In-123</span>
-              <span>Icon</span>
-              {' '}
-              <span>
-                {helmet.days}
-                {' '}
-                          days ago
-              </span>
-            </div>
-          ))}
+          <div>
+            <h2>Assigned Helmets</h2>
+          </div>
+          <div className={styles.boxWrapper}>
+            {helmets.map(helmet => (
+              <div className={styles.box}>
+                <span>Icon 123456789</span>
+                <span>Icon In-123</span>
+                <span>
+                  {`Icon${helmet.days} days ago`}
+                </span>
+              </div>
+            ))}
             <button className={styles.plus}>+</button>
+          </div>
         </section>
       </div>
     );

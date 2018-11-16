@@ -12,7 +12,8 @@ class Header extends Component {
           <div className={styles.overview}>Overview</div>
         </div>
         <div className={styles.item}>
-          <select>
+          <select className={styles.dropdown}>
+            <option selected disabled hidden>Select Site</option>
             <option>Amala</option>
             <option>Amala</option>
             <option>Amala</option>

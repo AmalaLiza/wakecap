@@ -8,9 +8,9 @@ import styles from './WorkerList.css';
 class WorkerList extends Component {
   render() {
     return (
-      <div className={classNames(mainStyle.box, mainStyle.sidebar2)}>
+      <div className={classNames(mainStyle.sidebar2)}>
         <div className={styles.searchWrapper}>
-          <input type="search" className={styles.input} />
+          <input type="search" placeholder="search workers" className={styles.input} />
         </div>
         {workerList.map(worker => (
           <Avatar

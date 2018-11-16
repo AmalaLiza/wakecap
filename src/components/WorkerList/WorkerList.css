@@ -1,14 +1,12 @@
-.searchWrapper {
-
-}
-
 .input {
     border: 2px solid #0000009c;;
     width: 317px;
     margin: 15px 0 5px 12px;
-    height: 25px;
+    height: 30px;
     border-radius: 3px;
-    text-shadow: none;
-    box-shadow: none;
     font-size: 14px;
+}
+
+.input::-webkit-input-placeholder {
+    padding-left: 10px;
 }

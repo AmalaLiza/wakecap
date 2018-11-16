@@ -20,3 +20,9 @@
 .id {
     margin-left: auto;
 }
+
+.name {
+    font-weight: bold;
+    font-size: 17px;
+    text-transform: capitalize;
+}
