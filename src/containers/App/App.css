@@ -7,8 +7,6 @@
     grid-area: sidebar2;
     background-color: #ece5db;
     color: #444;
-    height: calc(100% - 250px);
-    overflow: auto;
 }
 
 .wrapper {

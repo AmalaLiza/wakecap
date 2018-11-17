@@ -1,7 +1,7 @@
 .content {
     grid-area: content;
-    display: flex;
-    flex-direction: column;
+    height: calc(100% - 250px);
+    overflow: auto;
 }
 
 .box {

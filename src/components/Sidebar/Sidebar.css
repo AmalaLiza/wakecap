@@ -30,11 +30,12 @@
     height: 40px;
     width: 150px;
     position: absolute;
-    bottom: 0;
-    left: 33px;
+    bottom: 20px;
+    left: 25px;
     box-shadow: 5px 5px;
     text-transform: uppercase;
     font-weight: bold;
+
 }
 
 @media (min-width:480px) {

@@ -10,3 +10,21 @@
 .input::-webkit-input-placeholder {
     padding-left: 10px;
 }
+
+.paginationBtnWrapper{
+    display: flex;
+    justify-content: center;
+    padding: 20px;
+}
+
+.paginationBtnWrapper button {
+    background-color: transparent;
+    border: none;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.workerListWrapper{
+    height: calc(100% - 385px);
+    overflow: auto;
+}

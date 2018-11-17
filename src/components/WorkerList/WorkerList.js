@@ -22,16 +22,18 @@ class WorkerList extends Component {
     const { searchText } = this.state;
     return (
       <div className={classNames(mainStyle.sidebar2)}>
-        <div className={styles.searchWrapper}>
+        <div>
           <input type="search" placeholder="search workers" className={styles.input} onChange={this.handleChange} />
         </div>
-        {workerList.filter(worker => worker.name.includes(searchText)).map(worker => (
-          <Avatar
-            avatar={worker}
-            showIdNumber
-          />
-        ))}
-        <div>
+        <div className={styles.workerListWrapper}>
+          {workerList.filter(worker => worker.name.includes(searchText)).map(worker => (
+            <Avatar
+              avatar={worker}
+              showIdNumber
+            />
+          ))}
+        </div>
+        <div className={styles.paginationBtnWrapper}>
           <button>Prev</button>
           <button>1</button>
           <button>2</button>
