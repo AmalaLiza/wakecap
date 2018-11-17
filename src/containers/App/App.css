@@ -7,11 +7,6 @@
     grid-area: sidebar2;
     background-color: #ece5db;
     color: #444;
-    height: 100vh;
-}
-
-.footer {
-    grid-area: footer;
 }
 
 .wrapper {
@@ -21,22 +16,22 @@
     grid-template-areas: "header" "sidebar" "sidebar2" "content";
 }
 
-@media screen and (max-width: 600px) {
+@media (min-width: 480px) {
     body {
-        background-color: lightgreen;
+        background-color: blue;
     }
 
     .wrapper {
         grid-template-columns: 200px auto;
-        grid-template-areas: "header   header" "sidebar  sidebar" "sidebar2 sidebar2" "content content";
+        grid-template-areas: "sidebar  sidebar" "sidebar2 sidebar2" "header  header" "content content";
     }
 
 }
 
-@media only screen and (min-width: 600px) {
+@media only screen and (min-width: 1000px) {
     body {
-        height: 100vh;
         margin: 0;
+        background-color: red;
     }
 
     .wrapper {
