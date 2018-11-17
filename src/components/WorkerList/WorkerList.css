@@ -11,7 +11,7 @@
     padding-left: 10px;
 }
 
-.paginationBtnWrapper{
+.paginationBtnWrapper {
     display: flex;
     justify-content: center;
     padding: 20px;
@@ -24,7 +24,7 @@
     cursor: pointer;
 }
 
-.workerListWrapper{
-    height: calc(100% - 385px);
+.workerListWrapper {
+    height: 850px;
     overflow: auto;
 }

@@ -1,14 +1,14 @@
 .content {
     grid-area: content;
-    height: calc(100% - 250px);
     overflow: auto;
 }
 
 .box {
     padding-left: 30px;
+    margin-bottom: 30px;
     font-size: 14px;
-    width: 165px;
-    height: 165px;
+    min-width: 165px;
+    min-height: 165px;
     border: 2px solid grey;
     border-radius: 3px;
     margin-right: 25px;
@@ -16,6 +16,7 @@
     font-weight: 700;
     justify-content: space-evenly;
     flex-direction: column;
+    background-color: #ece5d9;
 }
 
 .firstSection {
@@ -45,6 +46,7 @@
     display: flex;
     padding: 40px;
     flex-direction: column;
+    min-height: 490px
 }
 
 .plus {
@@ -96,9 +98,24 @@
 .boxWrapper {
     display: flex;
     align-items: center;
+    flex-wrap: wrap;
 }
 
 .plus:hover {
     background-color: #423939;
     color: #ee8b44;
+}
+
+.icon {
+    width: 20px;
+    height: 17px;
+}
+
+.text {
+    padding-left: 10px;
+}
+
+.iconWrapper {
+    display: flex;
+    justify-content: flex-start;
 }

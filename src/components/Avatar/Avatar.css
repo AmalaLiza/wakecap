@@ -9,6 +9,14 @@
     padding: 10px;
 }
 
+.avatar:hover {
+    background-color: #44444482;
+}
+
+.selected {
+    background-color: #44444482;
+}
+
 .item {
     float: right;
 }

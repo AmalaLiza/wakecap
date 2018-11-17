@@ -14,7 +14,10 @@ class Sidebar extends Component {
         </div>
         <div className={styles.sideBarItemContainer}>
           {sideBarItem.map(item => (
-            <li className={styles.sideBarItemWrapper}>
+            <li
+              key={item}
+              className={styles.sideBarItemWrapper}
+            >
               <div className={styles.sideBarItem}>{item}</div>
             </li>
           ),

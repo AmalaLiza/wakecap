@@ -1,8 +1,8 @@
 import React, { Component } from 'react';
 import classNames from 'classnames';
+import PropTypes from 'prop-types';
 import Avatar from '../Avatar/Avatar';
 import mainStyle from '../../containers/App/App.css';
-import { workerList } from './WorkList.constants';
 import styles from './WorkerList.css';
 
 class WorkerList extends Component {
@@ -20,17 +20,21 @@ class WorkerList extends Component {
 
   render() {
     const { searchText } = this.state;
+    const { workerList, onClick } = this.props;
     return (
       <div className={classNames(mainStyle.sidebar2)}>
         <div>
           <input type="search" placeholder="search workers" className={styles.input} onChange={this.handleChange} />
         </div>
         <div className={styles.workerListWrapper}>
-          {workerList.filter(worker => worker.name.includes(searchText)).map(worker => (
-            <Avatar
-              avatar={worker}
-              showIdNumber
-            />
+          {workerList.filter(worker => worker.name.toLowerCase()
+            .includes(searchText.toLowerCase())).map(worker => (
+              <Avatar
+                onClick={onClick}
+                key={worker.name}
+                avatar={worker}
+                showIdNumber
+              />
           ))}
         </div>
         <div className={styles.paginationBtnWrapper}>
@@ -47,7 +51,14 @@ class WorkerList extends Component {
   }
 }
 
-WorkerList.propTypes = {};
-WorkerList.defaultProps = {};
+WorkerList.propTypes = {
+  workerList: PropTypes.array,
+  onClick: PropTypes.func,
+};
+
+WorkerList.defaultProps = {
+  workerList: [],
+  onClick: f => (f),
+};
 
 export default WorkerList;

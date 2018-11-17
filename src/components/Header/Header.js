@@ -13,10 +13,10 @@ class Header extends Component {
         </div>
         <div className={styles.item}>
           <select className={styles.dropdown}>
-            <option selected disabled hidden>Select Site</option>
-            <option>Amala</option>
-            <option>Amala</option>
-            <option>Amala</option>
+            <option defaultValue="Select Site" hidden>Select Site</option>
+            <option>Zone 1</option>
+            <option>Zone 2</option>
+            <option>Zone 3</option>
           </select>
         </div>
         <div className={styles.item}>
