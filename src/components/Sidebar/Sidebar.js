@@ -16,7 +16,7 @@ class Sidebar extends Component {
           {sideBarItem.map(item => (
             <li
               key={item}
-              className={styles.sideBarItemWrapper}
+              className={classNames(styles.sideBarItemWrapper, { [styles.selected]: item === 'Workers' })}
             >
               <div className={styles.sideBarItem}>{item}</div>
             </li>

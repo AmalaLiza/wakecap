@@ -9,10 +9,12 @@ const workerList = [
       {
         id: 123110567,
         days: 2,
+        time: 27,
       },
       {
         id: 1231103567,
         days: 3,
+        time: 4517,
       },
     ],
   },
@@ -26,10 +28,12 @@ const workerList = [
       {
         id: 1231130567,
         days: 2,
+        time: 2517,
       },
       {
         id: 1231130567,
         days: 3,
+        time: 3344,
       },
     ],
   },
@@ -43,10 +47,12 @@ const workerList = [
       {
         id: 1233110567,
         days: 2,
+        time: 47,
       },
       {
         id: 12311056567,
         days: 3,
+        time: 27,
       },
     ],
   },
@@ -106,7 +112,7 @@ const workerList = [
     id: 128,
     name: 'April Mata',
     designation: 'Labour',
-    supervisor: { name: 'Liza Jacob' },
+    supervisor: { name: 'Neena P' },
     workingHours: 78903,
     helmets: [
       {
@@ -123,7 +129,7 @@ const workerList = [
     id: 129,
     name: 'Maeve Tran',
     designation: 'engineer',
-    supervisor: { name: 'Liza Jacob' },
+    supervisor: { name: 'Ellen Jey' },
     workingHours: 78903,
     helmets: [
       {
@@ -140,7 +146,7 @@ const workerList = [
     id: 120,
     name: 'Gabrielle Francis',
     designation: 'engineer',
-    supervisor: { name: 'Liza Jacob' },
+    supervisor: { name: 'Aleena AK' },
     workingHours: 78903,
     helmets: [
       {
@@ -157,7 +163,7 @@ const workerList = [
     id: 104,
     name: 'Gabrielle Gracius',
     designation: 'engineer',
-    supervisor: { name: 'Liza Jacob' },
+    supervisor: { name: 'A Jacob' },
     workingHours: 78903,
     helmets: [
       {
@@ -173,17 +179,19 @@ const workerList = [
   {
     id: 168,
     name: 'Megan Maclean Weir',
-    supervisor: { name: 'Liza Jacob' },
+    supervisor: { name: 'Henna' },
     workingHours: 78903,
     designation: 'Labour',
     helmets: [
       {
         id: 234510567,
         days: 2,
+        time: 234517,
       },
       {
         id: 987567,
         days: 3,
+        time: 2517,
       },
     ],
   },
@@ -191,33 +199,37 @@ const workerList = [
     id: 168,
     name: 'Alexa Amazon ',
     designation: 'Labour',
-    supervisor: { name: 'Liza Jacob' },
+    supervisor: { name: 'Maria Job' },
     workingHours: 78903,
     helmets: [
       {
         id: 300000567,
         days: 2,
+        time: 6087,
       },
       {
         id: 9876547,
         days: 3,
+        time: 677,
       },
     ],
   },
   {
     id: 121,
     name: ' Jovani Tate',
-    supervisor: { name: 'Liza Jacob' },
+    supervisor: { name: 'Ameen H' },
     workingHours: 78903,
     designation: 'engineer',
     helmets: [
       {
         id: 123110567,
         days: 2,
+        time: 6789087,
       },
       {
         id: 123110567,
         days: 3,
+        time: 56787,
       },
     ],
   }];

@@ -1,3 +1,7 @@
+button {
+    cursor: pointer;
+}
+
 .sidebar {
     grid-area: sidebar;
     background-color: #444444;

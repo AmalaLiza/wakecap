@@ -14,7 +14,7 @@ class Avatar extends Component {
       >
         <img className={styles.image} src={Image} />
         <div className={styles.details}>
-          <div className={styles.name}>{avatar.name || 'Username'}</div>
+          <div className={styles.name}>{avatar.name || 'Amala James'}</div>
           <div>{avatar.designation || 'Supervisor'}</div>
         </div>
         {!!showIdNumber && <span className={styles.id}>{avatar.id}</span>}
