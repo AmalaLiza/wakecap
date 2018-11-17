@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import classNames from 'classnames';
 import styles from './Contents.css';
 import Avatar from '../../components/Avatar/Avatar';
+import SimpleBarChart from "../../components/BarChart/BarChart";
 
 class Contents extends Component {
   render() {
@@ -51,13 +52,14 @@ class Contents extends Component {
             <button className={styles.history}>Full history</button>
           </div>
           <div className={styles.graph}>
-              Graph Here
+            <SimpleBarChart />
           </div>
         </section>
         <section className={styles.section_3}>
           <div>
             <h2>Assigned Helmets</h2>
           </div>
+                    `
           <div className={styles.boxWrapper}>
             {helmets.map(helmet => (
               <div className={styles.box}>

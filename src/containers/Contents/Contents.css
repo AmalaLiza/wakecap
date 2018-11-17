@@ -48,13 +48,13 @@
 }
 
 .plus {
-    width: 25px;
-    font-size: 14px;
+    width: 27px;
+    font-size: 13px;
     font-weight: 900;
     border-radius: 50%;
-    height: 25px;
-    color: white;
-    background-color: black;
+    height: 27px;
+    border: 2px solid #423939;
+    color: #423939;
 }
 
 .properties {
@@ -96,4 +96,9 @@
 .boxWrapper {
     display: flex;
     align-items: center;
+}
+
+.plus:hover {
+    background-color: #423939;
+    color: #ee8b44;
 }

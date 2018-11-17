@@ -5,7 +5,7 @@ const CopyWebpackPlugin = require('copy-webpack-plugin');
 const path = require('path');
 const UglifyJSPlugin = require('uglifyjs-webpack-plugin');
 const OptimizeCSSAssetsPlugin = require('optimize-css-assets-webpack-plugin');
-const CompressionPlugin = require('compression-webpack-plugin')
+const CompressionPlugin = require('compression-webpack-plugin');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 const base = require('./webpack.base.config');
 // const BundleAnalyzerPlugin = require('webpack-bundle-analyzer').BundleAnalyzerPlugin;
@@ -114,8 +114,9 @@ module.exports = ({
     new CompressionPlugin({
       minRatio: 0.8,
     }),
+
     new CopyWebpackPlugin([
-      { from: 'core/src/images/favicon.png', to: 'favicon.png' },
+      { from: 'src/assets/favicon.jpg', to: 'favicon.jpg' },
     ], { copyUnmodified: true }),
   ],
   externals: [

@@ -5,6 +5,9 @@
 
 .sidebar2 {
     grid-area: sidebar2;
+    background-color: #ece5db;
+    color: #444;
+    height: 100vh;
 }
 
 .footer {
@@ -40,12 +43,6 @@
         grid-template-columns: 200px 340px auto;
         grid-template-areas: "sidebar  header  header" "sidebar sidebar2 content ";
     }
-}
-
-.sidebar2 {
-    background-color: #ccc;
-    color: #444;
-    height: 100vh;
 }
 
 .block {
