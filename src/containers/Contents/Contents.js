@@ -19,7 +19,7 @@ const Properties = () => (
   </div>
 );
 
-const Hours = workingHours => (
+const Hours = ({ workingHours }) => (
   <div className={styles.hours}>
     <span>Total hours worked</span>
     <span
@@ -32,6 +32,13 @@ const Hours = workingHours => (
     <button className={styles.history}>Full history</button>
   </div>
 );
+
+Hours.propTypes = {
+  workingHours: PropTypes.number,
+};
+Hours.defaultProps = {
+  workingHours: 456789,
+};
 
 const Contents = ({ activeWorker }) => (
   <div className={classNames(styles.content)}>
