@@ -7,32 +7,78 @@ const UglifyJSPlugin = require('uglifyjs-webpack-plugin');
 const OptimizeCSSAssetsPlugin = require('optimize-css-assets-webpack-plugin');
 const CompressionPlugin = require('compression-webpack-plugin');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
-const base = require('./webpack.base.config');
-// const BundleAnalyzerPlugin = require('webpack-bundle-analyzer').BundleAnalyzerPlugin;
-// var LodashModuleReplacementPlugin = require('lodash-webpack-plugin');
 
-module.exports = ({
-  entry, moduleName, buildFolder, context,
-  publicPath = '/', plugins = [],
-}) => ({
-  // devtool: 'cheap',
+module.exports = () => ({
   mode: 'production',
-  entry,
+  entry: {
+    main: [
+      // the entry point of our app
+      './src/index.js',
+    ],
+  },
   output: {
-    path: path.join(__dirname, '../__build__new', `${buildFolder || 'default'}`),
-    filename: `${moduleName ? (`${moduleName}.`) : ''}[name].[contenthash].js`,
-    chunkFilename: `${moduleName ? (`${moduleName}.`) : ''}[name].[contenthash].chunk.js`,
-    publicPath: publicPath || buildFolder,
+    path: path.join(__dirname, '../__build__new', 'default'),
+    filename: '[name].[contenthash].js',
+    chunkFilename: '[name].[contenthash].chunk.js',
+    publicPath: '/',
     globalObject: 'this',
   },
   cache: true,
-  module: base,
+  module: {
+    rules: [
+      {
+        test: /\.(png|jpg|jpeg(2)?)(\?[a-z0-9]+)?$/,
+        use: [
+          { loader: 'file-loader' },
+        ],
+      },
+      {
+        test: /\.html$/,
+        loader: 'url-loader',
+        exclude: [/index.html/],
+      },
+      {
+        test: /\.css$/,
+        exclude: [/global.css/],
+        use: [
+          'style-loader',
+          {
+            loader: 'css-loader',
+            options: {
+              sourceMap: true,
+              modules: true,
+              importLoaders: 1,
+              localIdentName: '[name]__[local]___[hash:base64:5]',
+            },
+          },
+        ],
+      },
+      {
+        test: [/global.css/],
+        use: [
+          'style-loader',
+          {
+            loader: 'css-loader',
+            options: {
+              sourceMap: true,
+            },
+          },
+          'postcss-loader',
+        ],
+      },
+      {
+        test: /\.js/,
+        exclude: /node_modules/,
+        loader: 'babel-loader',
+      },
+
+    ],
+  },
   resolve: {
     extensions: ['.js'],
     modules: [
       'node_modules',
       path.join(__dirname, '../core/src'),
-      // context || path.resolve(__dirname, '..'),
     ],
     cacheWithContext: false,
   },
@@ -71,7 +117,6 @@ module.exports = ({
     },
   },
   plugins: [
-    ...plugins,
     {
       apply: (compiler) => {
         compiler.hooks.done.tap('Progress', (compilation) => {

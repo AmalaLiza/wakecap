@@ -6,7 +6,7 @@
   "scripts": {
     "start": "node server.js",
     "clean": "rimraf ./__build__",
-    "build": "webpack --display-error-details --config webpack.prod.config.js --progress"
+    "build": "webpack --display-error-details --config webpack/webpack.prod.config.js --progress"
   },
   "author": "Amala James",
   "license": "ISC",
@@ -107,6 +107,7 @@
     "stylelint": "^9.3.0",
     "stylelint-csstree-validator": "^1.2.1",
     "stylelint-selector-bem-pattern": "^2.0.0",
+    "webpack-cli": "^3.1.2",
     "webpack-dev-server": "^3.1.3"
   }
 }
