@@ -39,7 +39,7 @@ npm start
 ### Dev notes:
 - Code placement:
     - Components:
-        - Those components which are independent and used by both core and apps, go in "src>components" folder.
+        - Those components which are independent, go in "src>components" folder.
         Example: Avatar, Header, SideBar
     - Containers:
         - Example App, Contents
