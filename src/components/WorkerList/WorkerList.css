@@ -24,7 +24,20 @@
     cursor: pointer;
 }
 
-.workerListWrapper {
-    height: 850px;
-    overflow: auto;
+@media (min-width: 480px) {
+    .workerListWrapper {
+        height: 551px;
+        overflow: auto;
+    }
 }
+
+@media only screen and (min-width: 1000px) {
+    .workerListWrapper {
+        height: 850px;
+        overflow: auto;
+    }
+}
+
+
+
+

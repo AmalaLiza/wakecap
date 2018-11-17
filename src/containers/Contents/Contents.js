@@ -12,7 +12,6 @@ class Contents extends Component {
   render() {
     const { activeWorker } = this.props;
     const { helmets } = activeWorker;
-    console.log(activeWorker.workingHours)
     return (
       <div className={classNames(styles.content)}>
         <section className={styles.section_1}>
