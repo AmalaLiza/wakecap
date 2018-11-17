@@ -1,1 +1,1 @@
-export const sideBarItem = ['Dashboard','Zones','Assign Helmets','Manage Sites','Settings'];
+export const sideBarItem = ['Dashboard', 'Wrokers', 'Zones', 'Assign Helmets', 'Reports', 'Manage Sites', 'Settings'];

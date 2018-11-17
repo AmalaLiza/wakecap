@@ -32,13 +32,13 @@
 .section_1 {
     display: flex;
     padding: 40px;
-    border-bottom: 1px solid green;
+    border-bottom: 1px solid #808080;
 }
 
 .section_2 {
     display: flex;
     padding: 40px;
-    border-bottom: 1px solid green;
+    border-bottom: 1px solid #808080;
 }
 
 .section_3 {

@@ -7,12 +7,8 @@
     grid-area: sidebar2;
     background-color: #ece5db;
     color: #444;
-    height: calc(100% - 334px);
+    height: calc(100% - 250px);
     overflow: auto;
-}
-
-.footer {
-    grid-area: footer;
 }
 
 .wrapper {
@@ -20,29 +16,34 @@
     color: #444;
     display: grid;
     grid-template-areas: "header" "sidebar" "sidebar2" "content";
+    height: 100vh;
+    overflow: hidden;
 }
 
-@media screen and (max-width: 600px) {
+@media (min-width: 480px) {
     body {
-        background-color: lightgreen;
+        background-color: blue;
     }
 
     .wrapper {
         grid-template-columns: 200px auto;
-        grid-template-areas: "header   header" "sidebar  sidebar" "sidebar2 sidebar2" "content content";
+        grid-template-areas: "sidebar  sidebar" "sidebar2 sidebar2" "header  header" "content content";
     }
 
 }
 
-@media only screen and (min-width: 600px) {
+@media only screen and (min-width: 1000px) {
     body {
-        height: 100vh;
         margin: 0;
+        background-color: red;
+        font-family: 'Ubuntu', sans-serif;
     }
 
     .wrapper {
         grid-template-columns: 200px 340px auto;
         grid-template-areas: "sidebar  header  header" "sidebar sidebar2 content ";
+        height: 100vh;
+        overflow: hidden;
     }
 }
 
