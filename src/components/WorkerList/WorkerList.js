@@ -9,16 +9,19 @@ class WorkerList extends Component {
   render() {
     return (
       <div className={classNames(mainStyle.sidebar2)}>
-        <div className={styles.searchWrapper}>
-          <input type="search" placeholder="search workers" className={styles.input} />
+        <div className={styles.wrokerList}>
+          <div className={styles.searchWrapper}>
+            <input type="search" placeholder="search workers" className={styles.input} />
+          </div>
+          {workerList.map(worker => (
+            <Avatar
+              avatar={worker}
+              showIdNumber
+            />
+          ))}
         </div>
-        {workerList.map(worker => (
-          <Avatar
-            avatar={worker}
-            showIdNumber
-          />
-        ))}
         <div>
+          <div>
             <button>Prev</button>
             <button>1</button>
             <button>2</button>
@@ -26,6 +29,7 @@ class WorkerList extends Component {
             <button>4</button>
             <button>5</button>
             <button>Next</button>
+          </div>
         </div>
       </div>
     );

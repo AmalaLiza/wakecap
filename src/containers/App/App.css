@@ -7,7 +7,8 @@
     grid-area: sidebar2;
     background-color: #ece5db;
     color: #444;
-    height: 100vh;
+    height: calc(100% - 334px);
+    overflow: auto;
 }
 
 .footer {
