@@ -50,7 +50,6 @@ crashlytics-build.properties
 fabric.properties
 .idea/typescript-compiler.xml
 
-bigbrain-ui.iml
 npm-debug.log
 
 src/fonts/flaticon.zip
